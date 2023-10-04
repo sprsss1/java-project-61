@@ -6,13 +6,7 @@ import static hexlet.code.App.welcome;
 
 public class Even {
     public static void evenGame() {
-        //greeting
-        //System.out.println("Welcome to the Brain Games!");
-        //Scanner scanName = new Scanner(System.in);
-        //System.out.println("May I have your name? ");
-        //var name = scanName.next();
-        //System.out.println("Hello, " + name + "!");
-        String name = welcome();
+        String userName = welcome();
         int needWin = 3;
         int winCounter = 0;
         //boolean check = true;
@@ -20,16 +14,16 @@ public class Even {
             //random number generator
             int minValue = 1;
             int maxValue = 50;
-            int number = minValue + (int) (Math.random() * (maxValue - minValue + 1));
+            int question = minValue + (int) (Math.random() * (maxValue - minValue + 1));
 
             String rightAnswer = "yes";
 
-            if ((number % 2) != 0) {
+            if ((question % 2) != 0) {
                 rightAnswer = "no";
             }
 
             System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
-            System.out.println("Question: " + number);
+            System.out.println("Question: " + question);
 
             Scanner sc = new Scanner(System.in);
             String userAnswer = sc.next();
@@ -43,13 +37,13 @@ public class Even {
                 i = 5;
                 System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was '"
                         + rightAnswer + "'.");
-                System.out.println("Let's try again, " + name + "!");
+                System.out.println("Let's try again, " + userName + "!");
             }
         }
         //check = false;
 
         if (winCounter == 3) {
-            System.out.println("Congratulations, " + name + "!");
+            System.out.println("Congratulations, " + userName + "!");
         }
     }
 }
