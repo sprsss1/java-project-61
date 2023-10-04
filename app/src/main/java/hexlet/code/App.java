@@ -42,6 +42,7 @@ public class App {
                 break;
             case 4:
                 gcdGame();
+                break;
             default:
                 System.out.println("Your choise is incorrect. Goodbye!");
                 System.exit(0);
