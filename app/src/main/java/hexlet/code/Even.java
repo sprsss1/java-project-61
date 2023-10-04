@@ -1,7 +1,10 @@
 package hexlet.code;
 
 
-import static hexlet.code.Engine.*;
+
+import static hexlet.code.Engine.welcome;
+import static hexlet.code.Engine.randomIntGenerator;
+import static hexlet.code.Engine.mainEngine;
 
 public class Even {
     public static void evenGame() {
