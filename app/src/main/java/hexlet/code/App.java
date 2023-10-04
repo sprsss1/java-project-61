@@ -20,7 +20,6 @@ public class App {
         } else {
             System.exit(1);
         }
-        
         System.out.println("Your choise: " + choise);
         System.out.println();
 

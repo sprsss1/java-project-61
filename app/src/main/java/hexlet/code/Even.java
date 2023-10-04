@@ -41,7 +41,8 @@ public class Even {
                 winCounter += 1;
             } else {
                 i = 5;
-                System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was '" + rightAnswer + "'.");
+                System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was '"
+                        + rightAnswer + "'.");
                 System.out.println("Let's try again, " + name + "!");
             }
         }
