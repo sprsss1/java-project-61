@@ -24,6 +24,9 @@ public class App {
         System.out.println();
 
         switch (choise) {
+            case 0:
+                System.out.println("Goodbye!");
+                System.exit(0);
             case 1:
                 welcome();
                 break;
@@ -31,6 +34,7 @@ public class App {
                 evenGame();
                 break;
             default:
+                System.out.println("Your choise is incorrect. Goodbye!");
                 System.exit(0);
 
 
