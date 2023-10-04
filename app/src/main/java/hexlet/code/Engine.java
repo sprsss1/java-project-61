@@ -11,7 +11,7 @@ public class Engine {
         System.out.println("Hello, " + name + "!");
         return name;
     }
-    public static int randomIntGenerator() {//use random numbers generator
+    public static int randomIntGenerator() { //use random numbers generator
         int minValue = 1;
         int maxValue = 50;
         return minValue + (int) (Math.random() * (maxValue - minValue + 1));
