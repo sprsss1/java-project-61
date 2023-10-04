@@ -11,10 +11,8 @@ public class Engine {
         System.out.println("Hello, " + name + "!");
         return name;
     }
-    public static int randomIntGenerator() { //use random numbers generator
-        int minValue = 1;
-        int maxValue = 50;
-        return minValue + (int) (Math.random() * (maxValue - minValue + 1));
+    public static int randomIntGenerator(int min, int max) { //use random numbers generator
+        return min + (int) (Math.random() * (max - min + 1));
     }
 
     public static void mainEngine(String gameTask, String[] question, String[] rightAnswer, String userName) {

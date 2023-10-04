@@ -21,8 +21,8 @@ public class Calc {
     }
     //all games using random questions/answers generators
     public static String questionGenerator() {
-        int fNumber = randomIntGenerator();
-        int sNumber = randomIntGenerator();
+        int fNumber = randomIntGenerator(1, 50);
+        int sNumber = randomIntGenerator(1, 50);
         return fNumber + " + " + sNumber;
     }
     public static String answerGenerator(String string) {

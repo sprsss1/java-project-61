@@ -22,7 +22,7 @@ public class Even {
     }
     //all games using random questions/answers generators
     public static String questionGenerator() {
-        int fNumber = randomIntGenerator();
+        int fNumber = randomIntGenerator(1, 50);
         return String.valueOf(fNumber);
     }
     public static String answerGenerator(String string) {
