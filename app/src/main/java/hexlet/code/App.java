@@ -3,6 +3,7 @@ package hexlet.code;
 import java.util.Scanner;
 
 
+import static hexlet.code.Engine.welcome;
 import static hexlet.code.Even.evenGame;
 
 public class App {
@@ -42,12 +43,5 @@ public class App {
         }
 
     }
-    public static String welcome() {
-        System.out.println("Welcome to the Brain Games!");
-        Scanner scanName = new Scanner(System.in);
-        System.out.println("May I have your name? ");
-        var name = scanName.next();
-        System.out.println("Hello, " + name + "!");
-        return name;
-    }
+
 }
