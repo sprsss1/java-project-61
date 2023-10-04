@@ -5,6 +5,7 @@ import static hexlet.code.Engine.welcome;
 import static hexlet.code.Even.evenGame;
 import static hexlet.code.Calc.calcGame;
 import static hexlet.code.Gcd.gcdGame;
+import static hexlet.code.Progression.progressionGame;
 
 public class App {
     public static void main(String[] args) {
@@ -14,6 +15,7 @@ public class App {
         System.out.println("2 - Even");
         System.out.println("3 - Calc");
         System.out.println("4 - GCD");
+        System.out.println("5 - Progression");
         System.out.println("0 - Exit");
 
         int choise = 0;
@@ -42,6 +44,9 @@ public class App {
                 break;
             case 4:
                 gcdGame();
+                break;
+            case 5:
+                progressionGame();
                 break;
             default:
                 System.out.println("Your choise is incorrect. Goodbye!");
