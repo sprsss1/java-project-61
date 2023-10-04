@@ -18,7 +18,8 @@ public class App {
         if (sc.hasNextInt()) {
             choise = sc.nextInt();
         } else {
-            System.exit(1);
+            System.out.println("Your choise is incorrect. Goodbye!");
+            System.exit(0);
         }
         System.out.println("Your choise: " + choise);
         System.out.println();
