@@ -40,7 +40,6 @@ public class Gcd {
         while (answer == 0) {
             int ost = firstNum % secondNum;
             if (firstNum % secondNum > 0) {
-                System.out.println(firstNum + " " + secondNum + " " + ost);
                 firstNum = secondNum;
                 secondNum = ost;
             } else {
