@@ -1,10 +1,9 @@
 package hexlet.code;
 
 import java.util.Scanner;
-
-
 import static hexlet.code.Engine.welcome;
 import static hexlet.code.Even.evenGame;
+import static hexlet.code.Calc.calcGame;
 
 public class App {
     public static void main(String[] args) {
@@ -12,6 +11,7 @@ public class App {
         System.out.println("Please enter the game number and press Enter.");
         System.out.println("1 - Greet");
         System.out.println("2 - Even");
+        System.out.println("3 - Calc");
         System.out.println("0 - Exit");
 
         int choise = 0;
@@ -34,6 +34,9 @@ public class App {
                 break;
             case 2:
                 evenGame();
+                break;
+            case 3:
+                calcGame();
                 break;
             default:
                 System.out.println("Your choise is incorrect. Goodbye!");
