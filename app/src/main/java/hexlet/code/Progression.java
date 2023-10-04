@@ -16,15 +16,14 @@ public class Progression {
             int[] firsPartQuestion = firstPartOfQuestionGenerator();
             int indexOfRightAnswer = randomIntGenerator(0, firsPartQuestion.length - 1);
             rightAnswer[i] = String.valueOf(firsPartQuestion[indexOfRightAnswer]);
-
             question[i] = secondPartOfQuestionGenerator(firsPartQuestion, indexOfRightAnswer);
-
-
         }
 
         mainEngine(gameTask, question, rightAnswer, userName);
     }
     //all games using random questions/answers generators
+    //first part return full numbers array
+    //second part return String array with hidden element
     public static int[] firstPartOfQuestionGenerator() {
         int firstElement = randomIntGenerator(1, 50);
         int stepProgression = randomIntGenerator(1, 10);
