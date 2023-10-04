@@ -17,20 +17,11 @@ public class Engine {
         return minValue + (int) (Math.random() * (maxValue - minValue + 1));
     }
 
-    public static void mainEngine(String gameTask, String userName) {
+    public static void mainEngine(String gameTask, String question, String rightAnswer, String userName) {
         int needWin = 3;
         int winCounter = 0;
 
         for (var i = 0; i < needWin; i++) {
-
-            int question = randomIntGenerator();
-
-
-            String rightAnswer = "yes";
-
-            if ((question % 2) != 0) {
-                rightAnswer = "no";
-            }
 
             System.out.println(gameTask);
             System.out.println("Question: " + question);
