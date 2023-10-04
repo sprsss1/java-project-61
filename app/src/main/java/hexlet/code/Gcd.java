@@ -19,6 +19,7 @@ public class Gcd {
 
         mainEngine(gameTask, question, rightAnswer, userName);
     }
+    //all games using random questions/answers generators
     public static String questionGenerator() {
         int fNumber = randomIntGenerator();
         int sNumber = randomIntGenerator();
@@ -35,6 +36,7 @@ public class Gcd {
             firstNum = secondNum;
             secondNum = temp;
         }
+        // we use Euclid's algorithm
         while (answer == 0) {
             int ost = firstNum % secondNum;
             if (firstNum % secondNum > 0) {

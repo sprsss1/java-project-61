@@ -19,6 +19,7 @@ public class Calc {
 
         mainEngine(gameTask, question, rightAnswer, userName);
     }
+    //all games using random questions/answers generators
     public static String questionGenerator() {
         int fNumber = randomIntGenerator();
         int sNumber = randomIntGenerator();

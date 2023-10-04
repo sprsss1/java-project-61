@@ -20,6 +20,7 @@ public class Even {
 
         mainEngine(gameTask, question, rightAnswer, userName);
     }
+    //all games using random questions/answers generators
     public static String questionGenerator() {
         int fNumber = randomIntGenerator();
         return String.valueOf(fNumber);
