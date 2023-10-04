@@ -1,7 +1,8 @@
 package hexlet.code;
 
-import static hexlet.code.Engine.*;
+import static hexlet.code.Engine.welcome;
 import static hexlet.code.Engine.randomIntGenerator;
+import static hexlet.code.Engine.mainEngine;
 import static java.lang.Integer.parseInt;
 
 public class Gcd {
@@ -28,17 +29,23 @@ public class Gcd {
         int firstNum = parseInt(splitString[0]);
         int secondNum = parseInt((splitString[1]));
         int temp;
-        int answer;
+        int answer = 0;
         if (firstNum < secondNum) {
             temp = firstNum;
             firstNum = secondNum;
             secondNum = temp;
         }
-        while (firstNum != 0 | secondNum != 0) {
-            firstNum = firstNum % secondNum;
-            secondNum = secondNum % firstNum;
+        while (answer == 0) {
+            int ost = firstNum % secondNum;
+            if (firstNum % secondNum > 0) {
+                System.out.println(firstNum + " " + secondNum + " " + ost);
+                firstNum = secondNum;
+                secondNum = ost;
+            } else {
+                answer = secondNum;
+            }
         }
-        answer = Math.max(firstNum, secondNum);
+
 
 
         return String.valueOf(answer);
