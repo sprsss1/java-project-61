@@ -17,31 +17,31 @@ public class Engine {
         return minValue + (int) (Math.random() * (maxValue - minValue + 1));
     }
 
-    public static void mainEngine(String gameTask, String question, String rightAnswer, String userName) {
+    public static void mainEngine(String gameTask, String[] question, String[] rightAnswer, String userName) {
         int needWin = 3;
         int winCounter = 0;
 
         for (var i = 0; i < needWin; i++) {
 
             System.out.println(gameTask);
-            System.out.println("Question: " + question);
+            System.out.println("Question: " + question[i]);
 
             Scanner sc = new Scanner(System.in);
             String userAnswer = sc.next();
 
             System.out.println("Your answer: " + userAnswer);
 
-            if (userAnswer.equals(rightAnswer)) {
+            if (userAnswer.equals(rightAnswer[i])) {
                 System.out.println("Correct!");
                 winCounter += 1;
             } else {
-                i = 5;
+
                 System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was '"
-                        + rightAnswer + "'.");
+                        + rightAnswer[i] + "'.");
                 System.out.println("Let's try again, " + userName + "!");
+                i = 5;
             }
         }
-        //check = false;
 
         if (winCounter == 3) {
             System.out.println("Congratulations, " + userName + "!");
