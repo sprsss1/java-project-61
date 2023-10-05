@@ -19,32 +19,39 @@ public class Engine {
         System.out.println("6 - Prime");
         System.out.println("0 - Exit");
     }
-    public static void launchGame() {
+    public static int choiceGame() {
         Scanner sc = new Scanner(System.in);
-        int choise = 0;
+        int choice = 0;
         if (sc.hasNextInt()) {
-            choise = sc.nextInt();
+            choice = sc.nextInt();
         } else {
             System.out.println("Your choise is incorrect. Goodbye!");
             System.exit(0);
         }
-        System.out.println("Your choise: " + choise);
+        System.out.println("Your choise: " + choice);
         System.out.println();
-        if (choise == 0) {
+        return choice;
+    }
+    public static void launchGame() {
+        int choice = choiceGame();
+        if (choice == 0) {
             System.out.println("Goodbye!");
             System.exit(0);
-        } else if (choise == 1) {
+        } else if (choice == 1) {
             welcome();
-        } else if (choise == 2) {
+        } else if (choice == 2) {
             evenGame();
-        } else if (choise == 3) {
+        } else if (choice == 3) {
             calcGame();
-        } else if (choise == 4) {
+        } else if (choice == 4) {
             gcdGame();
-        } else if (choise == 5) {
+        } else if (choice == 5) {
             progressionGame();
-        } else if (choise == 6) {
+        } else if (choice == 6) {
             primeGame();
+        } else if (choice > 6) {
+            System.out.println("Your choise is incorrect. Goodbye!");
+            System.exit(0);
         }
     }
     public static String welcome() {
