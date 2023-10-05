@@ -21,9 +21,7 @@ public class Engine {
     }
     public static void launchGame() {
         Scanner sc = new Scanner(System.in);
-
         int choise = 0;
-
         if (sc.hasNextInt()) {
             choise = sc.nextInt();
         } else {
@@ -32,34 +30,21 @@ public class Engine {
         }
         System.out.println("Your choise: " + choise);
         System.out.println();
-
-        switch (choise) {
-            case 0:
-                System.out.println("Goodbye!");
-                System.exit(0);
-            case 1:
-                welcome();
-                break;
-            case 2:
-                evenGame();
-                break;
-            case 3:
-                calcGame();
-                break;
-            case 4:
-                gcdGame();
-                break;
-            case 5:
-                progressionGame();
-                break;
-            case 6:
-                primeGame();
-                break;
-            default:
-                System.out.println("Your choise is incorrect. Goodbye!");
-                System.exit(0);
-
-
+        if (choise == 0) {
+            System.out.println("Goodbye!");
+            System.exit(0);
+        } else if (choise == 1) {
+            welcome();
+        } else if (choise == 2) {
+            evenGame();
+        } else if (choise == 3) {
+            calcGame();
+        } else if (choise == 4) {
+            gcdGame();
+        } else if (choise == 5) {
+            progressionGame();
+        } else if (choise == 6) {
+            primeGame();
         }
     }
     public static String welcome() {
