@@ -32,7 +32,7 @@ public class Engine {
         System.out.println();
         return choice;
     }
-    public static void launchGame() {
+    /*public static void launchGame() {
         int choice = choiceGame();
         if (choice == 0) {
             System.out.println("Goodbye!");
@@ -52,6 +52,35 @@ public class Engine {
         } else if (choice > 6) {
             System.out.println("Your choise is incorrect. Goodbye!");
             System.exit(0);
+        }
+    }*/
+    public static void launchGame() {
+        int choice = choiceGame();
+        switch (choice) {
+            case 0:
+                System.out.println("Goodbye!");
+                System.exit(0);
+            case 1:
+                welcome();
+                break;
+            case 2:
+                evenGame();
+                break;
+            case 3:
+                calcGame();
+                break;
+            case 4:
+                gcdGame();
+                break;
+            case 5:
+                progressionGame();
+                break;
+            case 6:
+                primeGame();
+                break;
+            default:
+                System.out.println("Your choise is incorrect. Goodbye!");
+                System.exit(0);
         }
     }
     public static String welcome() {
