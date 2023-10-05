@@ -9,9 +9,8 @@ public class Even {
     public static void evenGame() {
         String userName = welcome();
         String gameTask = "Answer 'yes' if the number is even, otherwise answer 'no'.";
-        String[] question = new String[3];
-
         String[] rightAnswer = new String[3];
+        String[] question = new String[3];
         int questionCount = 3;
         for (var i = 0; i < questionCount; i++) {
             question[i] = questionGenerator();

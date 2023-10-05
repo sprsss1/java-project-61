@@ -4,6 +4,7 @@ import static hexlet.code.Engine.welcome;
 import static hexlet.code.Engine.randomIntGenerator;
 import static hexlet.code.Engine.mainEngine;
 
+
 public class Progression {
     public static void progressionGame() {
         String userName = welcome();
