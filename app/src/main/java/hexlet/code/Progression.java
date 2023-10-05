@@ -9,13 +9,13 @@ public class Progression {
     public static void progressionGame() {
         String userName = welcome();
         String gameTask = "What number is missing in the progression?";
-        String[] rightAnswer = new String[3];
-        String[] question = new String[3];
         int questionCount = 3;
-
+        String[] rightAnswer = new String[questionCount];
+        String[] question = new String[questionCount];
         for (var i = 0; i < questionCount; i++) {
             int[] firsPartQuestion = firstPartOfQuestionGenerator();
-            int indexOfRightAnswer = randomIntGenerator(0, firsPartQuestion.length - 1);
+            int minInt = 0;
+            int indexOfRightAnswer = randomIntGenerator(minInt, firsPartQuestion.length - 1);
             rightAnswer[i] = String.valueOf(firsPartQuestion[indexOfRightAnswer]);
             question[i] = secondPartOfQuestionGenerator(firsPartQuestion, indexOfRightAnswer);
         }
@@ -26,9 +26,13 @@ public class Progression {
     //first part return full numbers array
     //second part return String array with hidden element
     public static int[] firstPartOfQuestionGenerator() {
-        int firstElement = randomIntGenerator(1, 50);
-        int stepProgression = randomIntGenerator(1, 10);
-        int numbersOfElements = randomIntGenerator(5, 12);
+        int minValue = 1;
+        int maxValue = 50;
+        int firstElement = randomIntGenerator(minValue, maxValue);
+        int stepProgression = randomIntGenerator(minValue, maxValue);
+        int minNumberOfElement = 5;
+        int maxNumberOfElement = 12;
+        int numbersOfElements = randomIntGenerator(minNumberOfElement, maxNumberOfElement);
         int[] fullString = new int[numbersOfElements];
         for (var i = 0; i < numbersOfElements; i++) {
             fullString[i] = firstElement + stepProgression * i;
