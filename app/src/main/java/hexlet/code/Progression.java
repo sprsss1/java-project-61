@@ -52,10 +52,12 @@ public class Progression {
             //    quest.append("..");
             //    quest.append(" ");
             if (i == hide & i != arrayLength - 1) {
-                quest.append(" ");
+                quest.append(prefix);
                 quest.append("..");
+                prefix = " ";
                     //quest.append(" ");
             } else if (i == hide & i == arrayLength - 1) {
+                quest.append(prefix);
                 quest.append("..");
             } else {
                 quest.append(prefix);
