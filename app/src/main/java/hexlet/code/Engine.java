@@ -79,8 +79,7 @@ public class Engine {
                 primeGame();
                 break;
             default:
-                System.out.println("Your choise is incorrect. Goodbye!");
-                System.exit(0);
+                System.out.println("Your choise is incorrect. Goodbye!"); System.exit(0);
         }
     }
     public static String welcome() {
