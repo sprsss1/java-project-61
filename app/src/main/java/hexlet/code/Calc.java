@@ -13,16 +13,16 @@ public class Calc {
         String[] rightAnswer = new String[questionCount];
         String[] question = new String[questionCount];
         for (var i = 0; i < questionCount; i++) {
-            question[i] = questionGenerator();
+            question[i] = questionGenerator(1, 50);
             rightAnswer[i] = answerGenerator(question[i]);
         }
 
         mainEngine(gameTask, question, rightAnswer, userName);
     }
     //all games using random questions/answers generators
-    public static String questionGenerator() {
-        int minValue = 1;
-        int maxValue = 50;
+    public static String questionGenerator(int minValue, int maxValue) {
+        //int minValue = min;
+        //int maxValue = max;
         int fNumber = randomIntGenerator(minValue, maxValue);
         int sNumber = randomIntGenerator(minValue, maxValue);
         return fNumber + " + " + sNumber;
