@@ -58,8 +58,8 @@ public class Engine {
         int choice = choiceGame();
         switch (choice) {
             case 0:
-                System.out.println("Goodbye!");
-                System.exit(0);
+                System.out.println("Goodbye!"); System.exit(0);
+
             case 1:
                 welcome();
                 break;
