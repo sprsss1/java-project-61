@@ -52,8 +52,8 @@ public class Progression {
             //    quest.append("..");
             //    quest.append(" ");
             if (i == hide & i != arrayLength - 1) {
-                    quest.append(" ");
-                    quest.append("..");
+                quest.append(" ");
+                quest.append("..");
                     //quest.append(" ");
             } else if (i == hide & i == arrayLength - 1) {
                 quest.append("..");
