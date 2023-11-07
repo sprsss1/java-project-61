@@ -43,16 +43,23 @@ public class Progression {
     public static String secondPartOfQuestionGenerator(int[] arr, int hide) {
         StringBuilder quest = new StringBuilder();
         int arrayLength = arr.length;
+        String prefix = "";
         for (var i = 0; i < arrayLength; i++) {
-            if (i != hide & i != arrayLength - 1) {
-                quest.append(arr[i]);
-                quest.append(" ");
-            } else if (i == hide & i != arrayLength - 1) {
-                quest.append("..");
-                quest.append(" ");
+            //if (i != hide & i != arrayLength - 1) {
+             //   quest.append(arr[i]);
+            //    quest.append(" ");
+            //} else if (i == hide & i != arrayLength - 1) {
+            //    quest.append("..");
+            //    quest.append(" ");
+            if (i == hide & i != arrayLength - 1) {
+                    quest.append(" ");
+                    quest.append("..");
+                    //quest.append(" ");
             } else if (i == hide & i == arrayLength - 1) {
                 quest.append("..");
             } else {
+                quest.append(prefix);
+                prefix = " ";
                 quest.append(arr[i]);
             }
         }
